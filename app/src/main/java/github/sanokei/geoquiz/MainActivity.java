@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mTrueButton;
     private Button mFalseButton;
     private Boolean mUndo = true;
-    private CoordinatorLayout mLayout;
+    private LinearLayout mLayout;
     private TextView mQuestionTextView;
     private Question[] mQuestionBank;
     private int mCurrentIndex;
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         //associate two buttons with the widget on the view of the xml file
         mTrueButton = (Button)findViewById(R.id.true_button);
         mFalseButton = (Button)findViewById(R.id.false_button);
-        mLayout = (CoordinatorLayout)findViewById(R.id.layout);
+        mLayout = (LinearLayout)findViewById(R.id.layout);
 
         Snackbar snackbar = Snackbar.make(mLayout, "You answered the question!",Snackbar.LENGTH_LONG )
                 .setAction("UNDO", new View.OnClickListener() {
